@@ -1,0 +1,22 @@
+{
+  "name": "vue-project",
+  "version": "1.0.0",
+  "description": "learn vue2 by doing",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iJinxin/vue-project.git"
+  },
+  "author": "ijinxin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iJinxin/vue-project/issues"
+  },
+  "homepage": "https://github.com/iJinxin/vue-project#readme",
+  "devDependencies": {
+    "webpack": "^4.8.1"
+  }
+}
