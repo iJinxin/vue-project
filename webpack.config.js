@@ -1,28 +1,38 @@
 /**
  * Created by jinxin on 2018/5/8.
  */
+const path = require('path');
+
 module.exports = {
-    entry: __dirname + "/app/main.js",
+    entry: "./src/main.js",
     output: {
-        path: __dirname + "/public",
+        path: path.resolve(__dirname, 'public'),
         filename: "bundle.js"
     },
-    module: {
-        loaders: [{
-            test: /\.js$/,
-            loader: "babel-loader",
-            exclude: /node_modules/
-        }]
-    },
-    devServer: {
-        contentBase: "./public",
-        colors: true,
-        historyApiFallback: true,
-        inline: true
-    },
+    // 解析vue文件
     resolve: {
         alias: {
             "vue$": "vue/dist/vue.js"
         }
+    },
+    // 改变项目根目录
+    devServer: {
+        contentBase: path.resolve(__dirname),
+        port: 8080,
+        inline: true
+    },
+    devtool: 'source-map',
+    module: {
+        rules : [{
+            test: /\.js$/,
+            loader: "babel-loader",
+            exclude: /node_modules/
+        },{
+            test: /\.css$/,
+            loader: 'style-loader!css-loader',
+        },{
+            test: /\.vue$/,
+            loader: 'vue-loader'
+        }]
     }
 };

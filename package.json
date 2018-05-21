@@ -4,7 +4,8 @@
   "description": "learn vue2 by doing",
   "main": "main.js",
   "scripts": {
-    "start": "Webpack"
+    "start": "webpack-dev-server --open --hot --inline",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "vue": "^2.5.16"
+    "style-loader": "^0.21.0",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16"
   }
 }
