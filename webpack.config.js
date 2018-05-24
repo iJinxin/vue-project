@@ -3,6 +3,11 @@
  */
 const path = require('path');
 
+
+function resolve (dir) {
+    return path.join(__dirname, '..', dir)
+}
+
 module.exports = {
     entry: "./src/main.js",
     output: {
@@ -12,8 +17,10 @@ module.exports = {
     // 解析vue文件
     resolve: {
         alias: {
-            "vue$": "vue/dist/vue.js"
-        }
+            'vue$': 'vue/dist/vue.esm.js',
+            '@': resolve('src')
+        },
+        extensions: ['*', '.js', '.vue', '.json']
     },
     // 改变项目根目录
     devServer: {

@@ -4,7 +4,7 @@
   "description": "learn vue2 by doing",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --open --hot --inline",
+    "start": "webpack-dev-server",
     "build": "webpack"
   },
   "repository": {

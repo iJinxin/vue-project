@@ -4,25 +4,15 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+// import home from '../components/pages/home.vue'
+
 Vue.use(Router);
 
 export default new Router({
     routes: [
         {
-            path: '/',
-            redirect: '/some-page'
-        },
-        {
-            path: '/',
-            component: '../component/pages/home.vue',
-            meta: {title: '首页'},
-            children: [
-                {
-                    path: '/some-page',
-                    component: '../component/pages/somePage.vue',
-                    meta: {title: 'somePage'}
-                }
-            ]
+            path: '/home',
+            component: resolve => require(['../components/pages/home.vue'], resolve),
         }
     ]
 })
