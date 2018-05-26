@@ -69,6 +69,11 @@
                     },
                     {
                         icon: 'el-icon-setting',
+                        index: 'memorial',
+                        title: '纪念日'
+                    },
+                    {
+                        icon: 'el-icon-setting',
                         index: 'explain',
                         title: '说明'
                     }

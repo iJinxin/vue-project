@@ -8,6 +8,7 @@ import home from '../components/pages/home.vue';
 import first from '../components/pages/first.vue';
 import second from '../components/pages/second.vue';
 import explain from '../components/pages/explain.vue';
+import memorial from '../components/pages/memorial.vue';
 
 Vue.use(Router);
 
@@ -31,6 +32,11 @@ export default new Router({
                     path: '/second',
                     component: second,
                     meta: { title: 'second' }
+                },
+                {
+                    path: '/memorial',
+                    component: memorial,
+                    meta: {  title: 'memorial' }
                 },
                 {
                     path: '/explain',
