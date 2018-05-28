@@ -1,26 +1,28 @@
 <template>
     <div>
-        <p>{{days}}</p>
+        <p>days:{{beMyGirl}}</p>
     </div>
 </template>
 <script>
     export default {
         data(){
             return {
-                days: 1
+                beMyGirl: 1
             }
         },
         methods: {
-            getDays() {
-                let start = (new Date(2018, 2, 22, 0, 0, 0)).getTime();
-                let now = Date.now();
-                this.days = Math.floor((now - start)/(24 * 3600 * 1000));
+            getMyGirlDays() {
+                const aDay = 24*3600*1000; // 一天的毫秒数
+                // 月份为0-11
+                //let start = new Date(2018, 1, 22).getTime();
+                let start = Date.parse('2018-2-22');
+                let now = new Date().getTime();
+
+                this.beMyGirl = Math.ceil((now - start) / (aDay));
             }
         },
-        render: function (el) {
-            let start = (new Date(2018, 2, 22, 0, 0, 0)).getTime();
-            let now = Date.now();
-            this.days = Math.floor((now - start)/(24 * 3600 * 1000));
+        created: function () {
+            this.getMyGirlDays();
         }
     }
 </script>

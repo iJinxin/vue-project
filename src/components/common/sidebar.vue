@@ -1,6 +1,6 @@
 <template>
     <aside>
-        <el-menu class="sidebar-el-menu" :default-active="onRoutes" background-color="#324157"
+        <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#324157"
                  text-color="#bfcbd9" active-text-color="#20a0ff" unique-opened router>
             <template v-for="item in items">
                 <template v-if="item.subs">
@@ -25,6 +25,51 @@
         </el-menu>
     </aside>
 </template>
+
+<script>
+    import vm from '../common/vm.js';
+    export default {
+        data(){
+            return {
+                collapse: false,
+                items: [
+                    {
+                        icon: 'el-icon-setting',
+                        index: 'first',
+                        title: '系统首页'
+                    },
+                    {
+                        icon: 'el-icon-setting',
+                        index: 'second',
+                        title: '第二个'
+                    },
+                    {
+                        icon: 'el-icon-date',
+                        index: 'memorial',
+                        title: '纪念日'
+                    },
+                    {
+                        icon: 'el-icon-info',
+                        index: 'explain',
+                        title: '说明'
+                    }
+                ]
+            }
+        },
+        computed:{
+            onRoutes(){
+                return this.$route.path.replace('/', '');
+            }
+        },
+        created(){
+            vm.$on('collapse', data => {
+                this.collapse = data;
+            })
+        }
+    }
+
+</script>
+
 <style type="text/css">
     aside{
         position: absolute;
@@ -52,39 +97,3 @@
         list-style: none;
     }
 </style>
-<script>
-    export default {
-        data(){
-            return {
-                items: [
-                    {
-                        icon: 'el-icon-setting',
-                        index: 'first',
-                        title: '系统首页'
-                    },
-                    {
-                        icon: 'el-icon-setting',
-                        index: 'second',
-                        title: '第二个'
-                    },
-                    {
-                        icon: 'el-icon-setting',
-                        index: 'memorial',
-                        title: '纪念日'
-                    },
-                    {
-                        icon: 'el-icon-setting',
-                        index: 'explain',
-                        title: '说明'
-                    }
-                ]
-            }
-        },
-        computed:{
-            onRoutes(){
-                return this.$route.path.replace('/', '');
-            }
-        }
-    }
-
-</script>

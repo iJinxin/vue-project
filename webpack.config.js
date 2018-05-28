@@ -36,10 +36,13 @@ module.exports = {
             exclude: /node_modules/
         },{
             test: /\.css$/,
-            loader: 'style-loader!css-loader',
+            loader: "style-loader!css-loader",
         },{
             test: /\.vue$/,
-            loader: 'vue-loader'
+            loader: "vue-loader"
+        },{
+            test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+            loader: "url-loader"
         }]
     }
 };

@@ -1,6 +1,8 @@
 <template>
     <header class="header">
-        <el-button type="primary">开</el-button>
+        <el-button type="text" class="collapse-btn" @click="doCollapse">
+            <i class="el-icon-menu"></i>
+        </el-button>
     </header>
 </template>
 <style>
@@ -12,3 +14,20 @@
         background: #2b3643;
     }
 </style>
+
+<script>
+    import vm from '../common/vm';
+    export default {
+        data() {
+            return {
+                collapse: false
+            }
+        },
+        methods: {
+            doCollapse() {
+                this.collapse = !this.collapse;
+                vm.$emit('collapse', this.collapse);
+            }
+        }
+    }
+</script>
