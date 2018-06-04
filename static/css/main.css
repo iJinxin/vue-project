@@ -1,0 +1,17 @@
+body, ul{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+ul > li:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+
+.content-container{
+    margin-left: 250px;
+}
