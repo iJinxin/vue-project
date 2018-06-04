@@ -11,7 +11,9 @@
         <div>
             <p>下阶段：</p>
             <ul>
-                <li></li>
+                <li>学习koa2</li>
+                <li>restful api，添加注册/登录功能，首页完善</li>
+                <li>webpack扩展</li>
             </ul>
         </div>
 

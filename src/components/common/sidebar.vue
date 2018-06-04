@@ -44,11 +44,6 @@
                         title: '第二个'
                     },
                     {
-                        icon: 'el-icon-date',
-                        index: 'memorial',
-                        title: '纪念日'
-                    },
-                    {
                         icon: 'el-icon-info',
                         index: 'explain',
                         title: '说明'

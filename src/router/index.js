@@ -34,11 +34,6 @@ export default new Router({
                     meta: { title: 'second' }
                 },
                 {
-                    path: '/memorial',
-                    component: memorial,
-                    meta: {  title: 'memorial' }
-                },
-                {
                     path: '/explain',
                     component: explain,
                     meta: { title: 'explain' }
