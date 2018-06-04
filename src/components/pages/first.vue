@@ -1,3 +1,3 @@
 <template>
-    <div>content</div>
+    <div>this is my first page</div>
 </template>

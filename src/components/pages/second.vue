@@ -1,3 +1,3 @@
 <template>
-    <div>222</div>
+    <div>this is the second page</div>
 </template>
