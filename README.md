@@ -2,8 +2,7 @@
 基于Vue2 + Element UI的项目，learn vue by doing
 
 ### 目录结构
-···
-
+```
 | -- src
 | 	| -- components
 |		| -- common
@@ -23,5 +22,4 @@
 |			| -- main.css
 |		| -- fonts
 | -- webpack.config.js
-
-···
+```
