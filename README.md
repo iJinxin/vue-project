@@ -3,28 +3,28 @@
 
 ### 目录结构
 ```
-|-- src                  //项目代码
+|-- src                  //项目组件代码
 |  |--components
-|    |--common
+|    |--common           //公用
 |      |--header.vue
 |      |--sidebar.vue
 |      |--vm.js
-|    |--pages
+|    |--pages            //页面内容
 |      |--explain.vue
 |      |--first.vue
 |      |--home.vue
-|		   |--login.vue
+|      |--login.vue
 |      |--second.vue
 |      |--router
 |      |--index.js
-|  |--router
+|  |--router             //路由
 |    |--index.js
 |  |--App.vue
 |  |--main.js
-|--static
+|--static                // css 与 font
 |  |--css
 |    |--main.css
 |  |--fonts
-|  |--index.html
-|--webpack.config.js
+|--index.html
+|--webpack.config.js     // webpack 配置
 ```
