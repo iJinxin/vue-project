@@ -4,22 +4,22 @@
 ### 目录结构
 ```
 | -- src
-| 	| -- components
-|		| -- common
-|			| -- header.vue
-|			| -- sidebar.vue
-|			| -- vm.js
-|		| -- pages
-|			| -- explain.vue
-|			| -- first.vue
-|			| -- home.vue
-|			| -- login.vue
-|			| -- second.vue
+| | -- components
+|	| -- common
+|		| -- header.vue
+|		| -- sidebar.vue
+|		| -- vm.js
+|	| -- pages
+|		| -- explain.vue
+|		| -- first.vue
+|		| -- home.vue
+|		| -- login.vue
+|		| -- second.vue
 |	| -- router
 |		| -- index.js
-|	| -- static
-|		| -- css
-|			| -- main.css
-|		| -- fonts
+| -- static
+|	| -- css
+|	  | -- main.css
+|	| -- fonts
 | -- webpack.config.js
 ```
