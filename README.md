@@ -15,8 +15,6 @@
 |      |--home.vue
 |      |--login.vue
 |      |--second.vue
-|      |--router
-|      |--index.js
 |  |--router             //路由
 |    |--index.js
 |  |--App.vue
