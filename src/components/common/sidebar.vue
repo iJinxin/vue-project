@@ -73,7 +73,6 @@
         top: 60px;
         bottom: 0;
 
-        width: 250px;
     }
     aside > ul{
         height: 100%;
@@ -90,5 +89,8 @@
         -webkit-box-sizing: border-box;
         white-space: nowrap;
         list-style: none;
+    }
+    .sidebar-el-menu:not(.el-menu--collapse){
+        width: 250px;
     }
 </style>
