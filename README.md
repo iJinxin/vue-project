@@ -3,23 +3,26 @@
 
 ### 目录结构
 ```
-| -- src
-| 	| -- components
-|		| -- common
-|			| -- header.vue
-|			| -- sidebar.vue
-|			| -- vm.js
-|		| -- pages
-|			| -- explain.vue
-|			| -- first.vue
-|			| -- home.vue
-|			| -- login.vue
-|			| -- second.vue
-|	| -- router
-|		| -- index.js
-|	| -- static
-|		| -- css
-|			| -- main.css
-|		| -- fonts
-| -- webpack.config.js
+|-- src                  //项目组件代码
+|  |--components
+|    |--common           //公用
+|      |--header.vue
+|      |--sidebar.vue
+|      |--vm.js
+|    |--pages            //页面内容
+|      |--explain.vue
+|      |--first.vue
+|      |--home.vue
+|      |--login.vue
+|      |--second.vue
+|  |--router             //路由
+|    |--index.js
+|  |--App.vue
+|  |--main.js
+|--static                // css 与 font
+|  |--css
+|    |--main.css
+|  |--fonts
+|--index.html
+|--webpack.config.js     // webpack 配置
 ```
