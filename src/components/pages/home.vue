@@ -3,7 +3,9 @@
         <v-head></v-head>
         <v-sidebar></v-sidebar>
         <div class="content-container" :class="{'content-collapse':collapse}">
-            <router-view></router-view>
+            <div class="content">
+                <router-view></router-view>
+            </div>
         </div>
     </div>
 </template>
@@ -29,3 +31,18 @@
         }
     }
 </script>
+
+<style>
+    .content-container{
+        margin-left: 250px;
+        transition: margin-left .3s ease-in-out;
+        -webkit-transition: margin-left .3s ease-in-out;
+    }
+    .content-container.content-collapse{
+        margin-left: 65px;
+    }
+    .content-container .content{
+        padding: 15px;
+    }
+
+</style>

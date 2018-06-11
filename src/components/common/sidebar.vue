@@ -1,5 +1,5 @@
 <template>
-    <aside>
+    <aside class="sidebar">
         <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#324157"
                  text-color="#bfcbd9" active-text-color="#20a0ff" unique-opened router>
             <template v-for="item in items">
@@ -10,7 +10,8 @@
                             <span slot="title">{{item.title}}</span>
                         </template>
                         <el-menu-item v-for="(subItem, i) in item.subs" :key="i" :index="subItem.index">
-                            {{subItem.title}}
+                            <i :class="subItem.icon"></i>
+                            <span slot="title">{{subItem.title}}</span>
                         </el-menu-item>
                     </el-submenu>
                 </template>
@@ -40,8 +41,20 @@
                     },
                     {
                         icon: 'el-icon-setting',
-                        index: 'second',
-                        title: '第二个'
+                        index: 'plan',
+                        title: 'plan',
+                        subs: [
+                            {
+                                icon: 'el-icon-date',
+                                index: 'panel',
+                                title: '面板'
+                            },
+                            {
+                                icon: 'el-icon-document',
+                                index: 'history',
+                                title: '历史'
+                            }
+                        ]
                     },
                     {
                         icon: 'el-icon-info',
@@ -66,7 +79,7 @@
 </script>
 
 <style type="text/css">
-    aside{
+    .sidebar{
         position: absolute;
         display: block;
         left: 0;
@@ -74,21 +87,8 @@
         bottom: 0;
 
     }
-    aside > ul{
+    .sidebar > ul{
         height: 100%;
-    }
-    aside > ul > li{
-        font-size: 14px;
-        color: #303133;
-        padding: 0 20px;
-        cursor: pointer;
-
-        height: 56px;
-        line-height: 56px;
-        position: relative;
-        -webkit-box-sizing: border-box;
-        white-space: nowrap;
-        list-style: none;
     }
     .sidebar-el-menu:not(.el-menu--collapse){
         width: 250px;

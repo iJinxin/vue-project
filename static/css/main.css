@@ -11,12 +11,3 @@ ul > li:focus{
 a{
     text-decoration: none;
 }
-
-.content-container{
-    margin-left: 250px;
-    transition: margin-left .3s ease-in-out;
-    -webkit-transition: margin-left .3s ease-in-out;
-}
-.content-container.content-collapse{
-    margin-left: 65px;
-}

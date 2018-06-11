@@ -6,7 +6,8 @@ import Router from 'vue-router';
 
 import home from '../components/pages/home.vue';
 import first from '../components/pages/first.vue';
-import second from '../components/pages/second.vue';
+import panel from '../components/pages/panel.vue';
+import history from '../components/pages/history.vue';
 import explain from '../components/pages/explain.vue';
 
 
@@ -29,9 +30,14 @@ export default new Router({
                     meta: { title: 'first' }
                 },
                 {
-                    path: '/second',
-                    component: second,
-                    meta: { title: 'second' }
+                    path: '/panel',
+                    component: panel,
+                    meta: { title: 'panel' }
+                },
+                {
+                    path: '/history',
+                    component: history,
+                    meta: { title: 'history' }
                 },
                 {
                     path: '/explain',
