@@ -1,24 +1,57 @@
 <template>
     <div class="panel">
         <el-container>
-            <el-header>
+            <el-header style="height: 40px;line-height: 40px">
                 <span class="panel-title">任务面板</span>
                 <el-tag>未处理{{planings.length}}</el-tag>
                 <el-tag>正在处理{{doings.length}}</el-tag>
-                <el-tag>正在测试{{testings.length}}</el-tag>
-                <el-tag>已完成{{dones.length}}</el-tag>
             </el-header>
             <el-main>
                 <el-row gutter="20">
-                    <el-col :span="6">
-                        <template v-for="planing in planings">
-                            <panel-task :taskStatus="plan"
-                                        :taskData=planing></panel-task>
-                        </template>
+                    <el-col :span="12" shadow="hover">
+                        <el-card>
+                            <div slot="header" class="clearfix">
+                                <span>待办任务</span>
+                                <el-button type="text" style="float: right; padding: 5px 0">添加</el-button>
+                            </div>
+                            <el-table :data="planings" :show-header="false" style="width: 100%;font-size: 14px">
+                                <el-table-column width="40">
+                                    <template slot-scope="scope">
+                                        <el-checkbox v-model="scope.value"></el-checkbox>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="task"></el-table-column>
+                                <el-table-column width="60">
+                                    <template slot-scope="scope">
+                                        <i class="el-icon-edit" @click="doEdit(scope.$index, true)"></i>
+                                        <i class="el-icon-delete" @click="doDelete(scope.$index, true)"></i>
+                                    </template>
+                                </el-table-column>
+                            </el-table>
+                        </el-card>
                     </el-col>
-                    <el-col :span="6"></el-col>
-                    <el-col :span="6"></el-col>
-                    <el-col :span="6"></el-col>
+                    <el-col :span="12" shadow="hover">
+                        <el-card>
+                            <div slot="header" class="clearfix">
+                                <span>进行中</span>
+                            </div>
+                            <el-table :data="doings" :show-header="false" style="font-size: 14px">
+                                <el-table-column width="40">
+                                    <template slot-scope="scope">
+                                        <el-checkbox v-model="scope.value"></el-checkbox>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="task"></el-table-column>
+                                <el-table-column width="60">
+                                    <template slot-scope="scope">
+                                        <i class="el-icon-edit" @click="doEdit(scope.$index, false)"></i>
+                                        <i class="el-icon-delete" @click="doDelete(scope.$index, false)"></i>
+                                    </template>
+                                </el-table-column>
+                            </el-table>
+                        </el-card>
+                    </el-col>
+
                 </el-row>
             </el-main>
         </el-container>
@@ -33,8 +66,6 @@
             return {
                 planings: [],
                 doings: [],
-                testings: [],
-                dones: []
             }
         },
         components: {
@@ -64,7 +95,21 @@
                         createdTime: '2018-6-11',
                         description: '任务2做点什么好呢'
                     }
+                ];
+                this.doings = [
+                    {
+                        id: 3,
+                        task: '正在处理。。。',
+                        createdTime: '2018-6-11',
+                        description: '啊啊啊，任务啊'
+                    },
                 ]
+            },
+            doEdit(index, isPlaning) {
+                console.log(index);
+            },
+            doDelete(index, isPlaning) {
+                console.log(111);
             }
         }
     }

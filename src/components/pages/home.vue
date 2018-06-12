@@ -34,15 +34,22 @@
 
 <style>
     .content-container{
-        margin-left: 250px;
-        transition: margin-left .3s ease-in-out;
-        -webkit-transition: margin-left .3s ease-in-out;
+        position: absolute;
+        top: 60px;
+        left: 250px;
+        right: 0;
+        bottom: 0;
+        transition: left .3s ease-in-out;
+        -webkit-transition: left .3s ease-in-out;
     }
     .content-container.content-collapse{
-        margin-left: 65px;
+        left: 65px;
     }
     .content-container .content{
         padding: 15px;
+        min-height: 100%;
+        background: #EAEDF1;
+        box-sizing: border-box;
     }
 
 </style>
